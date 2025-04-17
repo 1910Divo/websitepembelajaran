@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Website Pembelajaran</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            flex: 1;
+        }
+
+        .navbar {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            background-color: mediumaquamarine;
+            padding: 0 16px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .navbar img {
+            height: 60px;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-links a,
+        .dropbtn {
+            font-size: 16px;
+            color: white;
+            padding: 14px 16px;
+            text-decoration: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .nav-links a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: red;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .nested-dropdown {
+            position: relative;
+        }
+
+        .nested-dropdown-content {
+            display: none;
+            position: absolute;
+            left: 100%;
+            top: 0;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            z-index: 1;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .nested-dropdown:hover .nested-dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content button.dropbtn {
+            color: black;
+            padding: 12px 16px;
+            text-align: left;
+            width: 100%;
+        }
+
+        p {
+            font-size: larger;
+            text-align: justify;
+            padding: 5px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #777;
+            padding: 20px;
+            color: white;
+            text-align: center;
+            font-size: larger;
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                font-size: 14px;
+            }
+
+            .navbar {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+        @media (min-width: 1025px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <img src="c:\Users\divok\OneDrive\Documents\Gambar website\images__2_-removebg-preview.png" alt="Logo" />
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+
+            <div class="dropdown">
+                <button class="dropbtn">Rangkuman Materi Kelas 10 <i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-content">
+                    <div class="nested-dropdown">
+                        <button class="dropbtn">Matematika</button>
+                        <div class="nested-dropdown-content">
+                            <a href="Mtk10_1.html">SPLDV</a>
+                            <a href="Mtk10_2.html">Eksponen</a>
+                        </div>
+                    </div>
+                    <div class="nested-dropdown">
+                        <button class="dropbtn">Biologi</button>
+                        <div class="nested-dropdown-content">
+                            <a href="Bio10_1.html">Virus</a>
+                            <a href="Bio10_2.html">Keanekaragaman Hayati</a>
+                        </div>
+                    </div>
+                    <div class="nested-dropdown">
+                        <button class="dropbtn">Sosiologi</button>
+                        <div class="nested-dropdown-content">
+                            <a href="Sosiologi10_1.html">Fungsionalisme Talcott Parsons</a>
+                            <a href="Sosiologi10_2.html">Teori Sosiologi Klasik</a>
+                        </div>
+                    </div>
+                    <div class="nested-dropdown">
+                        <button class="dropbtn">Kimia</button>
+                        <div class="nested-dropdown-content">
+                            <a href="Kimia10_1.html">Hukum Dasar</a>
+                            <a href="Kimia10_2.html">Model Atom</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn">Rangkuman Materi Kelas 11 <i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-content">
+                    <div class="nested-dropdown">
+                        <button class="dropbtn">Matematika Wajib</button>
+                        <div class="nested-dropdown-content">
+                            <a href="Mat11_1.html">Translasi</a>
+                            <a href="Mat11_2.html">Refleksi</a>
+                        </div>
+                    </div>
+                    <div class="nested-dropdown">
+                        <button class="dropbtn">InSP</button>
+                        <div class="nested-dropdown-content">
+                            <a href="InSP11_1.html">Ideologi</a>
+                            <a href="InSP11_2.html">Perang Dunia II</a>
+                        </div>
+                    </div>
+                    <div class="nested-dropdown">
+                        <button class="dropbtn">Bahasa Indonesia</button>
+                        <div class="nested-dropdown-content">
+                            <a href="Bindo11_1.html">Karya Tulis Ilmiah</a>
+                            <a href="Bindo11_2.html">Teks Argumentasi</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="Kelas12.html"> Rangkuman Materi Kelas 12</a>
+            <a href="Jadwal.html">Jadwal Zoom dan Contact Person</a>
+        </div>
+    </div>
+
+    <main> 
+    <h1 align="center"> Kimia Kelas 10 </h1>
+    <p style="text-align: center;">
+        <img src="c:\Users\divok\OneDrive\Documents\Gambar website\HUKUM DASAR.png" width="50%">
+    </p>
+    <p> Selamat datang di pembelajaran Kimia Kelas 10. Disini, kami akan menuliskan rangkuman dari
+        materi Hukum Dasar Kimia yang dijelaskan di kelas. </p>
+    
+        <h1 align="center"> Hukum Dasar Kimia</h1>
+        <p> Para ilmuwan di abad ke-18 telah melakukan berbagai macam percobaan. Mereka menemukan keteraturan yang
+            dinyatakan sebagai hukum dasar kimia. Dari percobaan tersebut, ditentukan empat hukum dasar kimia, yaitu:
+        <ol>
+            <li> Hukum Kekekalan Massa. Hukum Kekekalan Massa merupakan hukum dasar kimia yang ditemukan oleh Antoine
+                Laurent Lavoisier. Pada percobaannya, ia menganalisis massa zat sebelum dan sesudah reaksi. Hasil dari
+                percobaan ini adalah massa zat-zat sebelum reaksi sama dengan massa zat-zat sesudah reaksi.</li>
+            <p style="text-align: center;">
+                <img src="c:\Users\divok\Downloads\Screenshot 2025-04-14 143910.png" width="40%">
+            </p>
+            <li> Hukum Perbandingan Tetap. Hukum Perbandingan Tetap merupakan hukum dasar kimia yang ditemukan oleh Joseph
+                Louis Proust pada tahun 1709. Hukum ini menyatakan bahwa perbandingan massa unsur-unsur dalam satu senyawa
+                adalah tertentu dan tetap. </li>
+            <p style="text-align: center;">
+                <img src="c:\Users\divok\Downloads\Screenshot 2025-04-14 164732.png" width="40%">
+            </p>
+            <li> Hukum Kelipatan Perbandingan. Hukum ini merupakan lanjutan dari hukum Proust dan dikembangkan oleh seorang
+                ilmuwan bernama John Dalton. Dalam percobaan tersebut, terlihat jika massa oksigen sama, perbandingan antara
+                massa nitrogen dalam senyawa nitrogen dioksida dan senyawa nitrogen monoksida adalah bilangan bulat
+                sederhana. Bunyi Hukum Dalton sendiri adalah "Jika dua jenis unsur bergabung membentuk lebih dari satu
+                senyawa dan
+                jika massa salah satu unsur dalam senyawa tersebut sama, sedangkan massa unsur lainnya berbeda, maka
+                perbandingan massa unsur lainnya dalam senyawa tersebut merupakan bilangan bulat sederhana." </li>
+            <p style="text-align: center;">
+                <img src="c:\Users\divok\Downloads\Screenshot 2025-04-14 201356.png" width="40%">
+            </p>
+            <li> Hukum Gay-Lusaac. Hukum ini menyatakan bahwa tekanan yang diberikan oleh gas sebanding dengan suhu gas
+                ketika massanya tetap dan volumenya konstan. Hukum ini dirumuskan oleh ahli kimia Prancis bernama Joseph
+                Gay-Lussac pada tahun 1808. Hukum Gay Lussac juga dikenal dengan sebutan hukum perbandingan volume dan hanya
+                berlaku pada reaksi yang melibatkan zat dalam bentuk gas.
+                <p style="text-align: center;">
+                    <img src="c:\Users\divok\Downloads\Screenshot 2025-04-14 202019.png" width="40%">
+                </p>
+            </li>
+            <li> Hukum Avogadro. Hukum Avogadro dikemukakan oleh ilmuwan asal Italia, Amedeo Avogadro, pada tahun 1811.
+                Bunyi dari hukum ini yaitu “Gas-gas dengan volume yang sama, serta berada pada suhu dan tekanan yang sama,
+                akan memiliki jumlah molekul yang sama.” Artinya, kalau ada dua tabung gas dengan volume yang sama, asalkan
+                suhunya (T) sama dan tekanannya (P) juga sama, jumlah molekul di dalam kedua tabung tersebut juga sama,
+                meskipun isinya berbeda. Contoh soal:
+                <p style="text-align: center;">
+                    <img src="c:\Users\divok\Downloads\Screenshot 2025-04-14 202432.png" width="40%">
+                </p>
+            </li>
+        </ol>
+    </p>
+    </main>
+        <footer>
+            'Pendidikan sebagai fondasi masa depan, janganlah menyerah untuk mengejar hal tersebut'
+            <h2 align="center"> AMDG </h2>
+        </footer>
+    </body>
+    
+    </html>

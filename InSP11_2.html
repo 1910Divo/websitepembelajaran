@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Website Pembelajaran</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            flex: 1;
+        }
+
+        .navbar {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            background-color: mediumaquamarine;
+            padding: 0 16px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .navbar img {
+            height: 60px;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-links a,
+        .dropbtn {
+            font-size: 16px;
+            color: white;
+            padding: 14px 16px;
+            text-decoration: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .nav-links a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: red;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .nested-dropdown {
+            position: relative;
+        }
+
+        .nested-dropdown-content {
+            display: none;
+            position: absolute;
+            left: 100%;
+            top: 0;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            z-index: 1;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .nested-dropdown:hover .nested-dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content button.dropbtn {
+            color: black;
+            padding: 12px 16px;
+            text-align: left;
+            width: 100%;
+        }
+
+        p {
+            font-size: larger;
+            text-align: justify;
+            padding: 5px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #777;
+            padding: 20px;
+            color: white;
+            text-align: center;
+            font-size: larger;
+        }
+
+        ol {
+            list-style-type: decimal;
+            margin-left: 20px;
+            font-size: 120%;
+        }
+
+        ul {
+            list-style-type: symbols();
+        }
+
+        li {
+            padding: 10px;
+        }
+
+        @media (max-width: 480px) {
+            body {
+                font-size: 14px;
+            }
+
+            .navbar {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+        @media (min-width: 1025px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <img src="c:\Users\divok\OneDrive\Documents\Gambar website\images__2_-removebg-preview.png" alt="Logo" />
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+
+            <div class="dropdown">
+                <button class="dropbtn">Rangkuman Materi Kelas 10 <i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-content">
+                    <div class="nested-dropdown">
+                        <button class="dropbtn">Matematika</button>
+                        <div class="nested-dropdown-content">
+                            <a href="Mtk10_1.html">SPLDV</a>
+                            <a href="Mtk10_2.html">Eksponen</a>
+                        </div>
+                    </div>
+                    <div class="nested-dropdown">
+                        <button class="dropbtn">Biologi</button>
+                        <div class="nested-dropdown-content">
+                            <a href="Bio10_1.html">Virus</a>
+                            <a href="Bio10_2.html">Keanekaragaman Hayati</a>
+                        </div>
+                    </div>
+                    <div class="nested-dropdown">
+                        <button class="dropbtn">Sosiologi</button>
+                        <div class="nested-dropdown-content">
+                            <a href="Sosiologi10_1.html">Fungsionalisme Talcott Parsons</a>
+                            <a href="Sosiologi10_2.html">Teori Sosiologi Klasik</a>
+                        </div>
+                    </div>
+                    <div class="nested-dropdown">
+                        <button class="dropbtn">Kimia</button>
+                        <div class="nested-dropdown-content">
+                            <a href="Kimia10_1.html">Hukum Dasar</a>
+                            <a href="Kimia10_2.html">Model Atom</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn">Rangkuman Materi Kelas 11 <i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-content">
+                    <div class="nested-dropdown">
+                        <button class="dropbtn">Matematika Wajib</button>
+                        <div class="nested-dropdown-content">
+                            <a href="Mat11_1.html">Translasi</a>
+                            <a href="Mat11_2.html">Refleksi</a>
+                        </div>
+                    </div>
+                    <div class="nested-dropdown">
+                        <button class="dropbtn">InSP</button>
+                        <div class="nested-dropdown-content">
+                            <a href="InSP11_1.html">Ideologi</a>
+                            <a href="InSP11_2.html">Perang Dunia II</a>
+                        </div>
+                    </div>
+                    <div class="nested-dropdown">
+                        <button class="dropbtn">Bahasa Indonesia</button>
+                        <div class="nested-dropdown-content">
+                            <a href="Bindo11_1.html">Karya Tulis Ilmiah</a>
+                            <a href="Bindo11_2.html">Teks Argumentasi</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="Kelas12.html">Rangkuman Materi Kelas 12</a>
+            <a href="Jadwal.html">Jadwal Zoom dan Contact Person</a>
+        </div>
+    </div>
+
+    <main> 
+    <h1 align="center"> InSP Kelas 11 </h1>
+    <p style="text-align: center;">
+        <img src="c:\Users\divok\OneDrive\Documents\Gambar website\Perang Dunia 2.jpg" width="40%">
+    </p>
+    <p> Selamat datang di pembelajaran Integrasi Sejarah dan PKN (InSP). Disini, kami akan menuliskan rangkuman dari
+        materi Perang Dunia II yang dijelaskan di kelas. </p>
+
+    <h1 align="center"> Perang Dunia II </h1>
+    <h2> Pengertian </h2>
+    <p> Perang global yang berlangsung dari tahun 1939-1945. Perang ini melibatkan banyak negara di seluruh dunia dan
+        merupakan perang paling mematikan dalam sejarah. </p>
+
+    <h2> Latar Belakang </h2>
+    <ol>
+        <li> Berawal dari tahun 1919 dimana Eropa baru selesai dengan Perang Dunia I dengan menandatangani Perjanjian
+            Versailles. Salah satu poin utama dalam perjanjian ini adalah Jerman harus membayar ganti rugi perang. </li>
+
+        <li> Hal ini membuat ekonomi negara Jerman berantakan dan kepercayaan masyarakat terhadap pemerintah menurun.
+        </li>
+
+        <li> Akibatnya Jerman pun mengalami krisis ekonomi dan puncaknya di Great Depression pada tahun 1929. Krisis ini
+            yang menjadi modal bagi politikus bernama Adolf Hitler untuk naik ke puncak kekuasaan di Jerman dan
+            melancarkan ambisinya untuk menguasai dunia.</li>
+
+    </ol>
+    <h2> Penyebab </h2>
+    <p> Ada beberapa penyebab Perang Dunia II, dan kami akan membaginya menjadi dua kategori yaitu umum dan khusus.</p>
+    <h3> Umum </h3>
+    <p>
+    <ol>
+
+        <li> Setelah krisis ekonomi pada tahun 1929, kepercayaan masyarakat di dunia beralih kepada sosok pemimpin yang
+            bertangan besi dengan harapan mampu memperbaiki kondisi ekonomi dan harga diri secara cepat. </li>
+
+        <li> Negara seperti Jerman, Italia, dan Jepang kemudian menjadikan model pemerintahan totaliter sebagai ideologi
+            negara. Ideologi yang berkembang di ketiga negara tersebut adalah fasisme. Tokoh yang kemudian menjadi sosok
+            yang memimpin negara dengan ideologi fasisme antara lain
+            Benito Mussolini (Italia) dan Adolf Hitler (Jerman). </li>
+
+        <li> Dengan didorong oleh pasukan militer yang kuat, Jerman, Italia, dan Jepang kemudian melakukan invasi dan
+            perluasan teritorial negara mereka. Negara Eropa lain pun takut karena kekuatan militer Jerman sangat kuat
+            dan Liga Bangsa-Bangsa (LBB) juga tidak bisa berbuat banyak karena kekuasaan yang sangat terbatas.</li>
+    </ol>
+    </p>
+
+    <h3> Khusus </h3>
+    <ol>
+        <li> Perang Dunia II dimulai ketika Jerman melakukan invasi ke Danzig, Polandia pada 1 September 1939. Hal ini
+            menyebabkan negara Eropa kehilangan kesabaran dan menyatakan perang melawan Jerman. </li>
+        <li> Ketika perang berlangsung di Eropa, di Samudra Pasifik terjadi ketegangan antara Amerika Serikat
+            dengan Jepang. Amerika yang biasanya berdagang minyak bumi dengan Jepang, melakukan embargo ke
+            Jepang dan menyebabkan Jepang kesulitan untuk mendapatkan minyak bumi.</li>
+        <li> Pada akhirnya, Jepang menyerang pangkalan Pearl Harbour pada 7 Desember 1941 dan Amerika Serikat pun ikut
+            menyatakan Perang Dunia II di bagian Samudra Pasifik dan Atlantik.</li>
+    </ol>
+
+    <h2> Negara Terlibat </h2>
+    <h3> Blok Poros </h3>
+    <ol>
+        <li> Jerman </li>
+        <li> Italia </li>
+        <li> Jepang </li>
+    </ol>
+    <h3> Blok Sekutu </h3>
+    <ol>
+        <li> Inggris </li>
+        <li> Prancis </li>
+        <li> Amerika Serikat </li>
+        <li> Uni Soviet </li>
+    </ol>
+
+    <h2> Dampak </h2>
+    <ol>
+        <li> Munculnya dua kekuatan politik besar dunia yaitu Amerika Serikat dan Uni Soviet. Kedua negara tersebut
+            mempunyai ekonomi kuat di wilayah masing-masing dan mereka rajin sekali memberikan bantuan bagi negara lain
+            setelah Perang Dunia II selesai. </li>
+        <li> Penemuan teknologi dan persenjataan, seperti teknologi roket oleh Wernher von Braun dan cikal bakal
+            komputer oleh Alan Turing.</li>
+    </ol>
+    </main>
+    <footer>
+        'Pendidikan sebagai fondasi masa depan, janganlah menyerah untuk mengejar hal tersebut'
+        <h2 align="center"> AMDG </h2>
+    </footer>
+</body>
+
+</html>

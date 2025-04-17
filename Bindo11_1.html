@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Website Pembelajaran</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            flex: 1;
+        }
+
+        .navbar {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            background-color: mediumaquamarine;
+            padding: 0 16px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .navbar img {
+            height: 60px;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-links a,
+        .dropbtn {
+            font-size: 16px;
+            color: white;
+            padding: 14px 16px;
+            text-decoration: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .nav-links a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: red;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .nested-dropdown {
+            position: relative;
+        }
+
+        .nested-dropdown-content {
+            display: none;
+            position: absolute;
+            left: 100%;
+            top: 0;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            z-index: 1;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .nested-dropdown:hover .nested-dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content button.dropbtn {
+            color: black;
+            padding: 12px 16px;
+            text-align: left;
+            width: 100%;
+        }
+
+        p {
+            font-size: larger;
+            text-align: justify;
+            padding: 5px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #777;
+            padding: 20px;
+            color: white;
+            text-align: center;
+            font-size: larger;
+        }
+
+        ol {
+            list-style-type: decimal;
+            margin-left: 20px;
+            font-size: 120%;
+        }
+
+        ul {
+            list-style-type: symbols();
+        }
+
+        li {
+            padding: 10px;
+        }
+
+        @media (max-width: 480px) {
+            body {
+                font-size: 14px;
+            }
+
+            .navbar {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+        @media (min-width: 1025px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <img src="c:\Users\divok\OneDrive\Documents\Gambar website\images__2_-removebg-preview.png" alt="Logo" />
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+
+            <div class="dropdown">
+                <button class="dropbtn">Rangkuman Materi Kelas 10 <i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-content">
+                    <div class="nested-dropdown">
+                        <button class="dropbtn">Matematika</button>
+                        <div class="nested-dropdown-content">
+                            <a href="Mtk10_1.html">SPLDV</a>
+                            <a href="Mtk10_2.html">Eksponen</a>
+                        </div>
+                    </div>
+                    <div class="nested-dropdown">
+                        <button class="dropbtn">Biologi</button>
+                        <div class="nested-dropdown-content">
+                            <a href="Bio10_1.html">Virus</a>
+                            <a href="Bio10_2.html">Keanekaragaman Hayati</a>
+                        </div>
+                    </div>
+                    <div class="nested-dropdown">
+                        <button class="dropbtn">Sosiologi</button>
+                        <div class="nested-dropdown-content">
+                            <a href="Sosiologi10_1.html">Fungsionalisme Talcott Parsons</a>
+                            <a href="Sosiologi10_2.html">Teori Sosiologi Klasik</a>
+                        </div>
+                    </div>
+                    <div class="nested-dropdown">
+                        <button class="dropbtn">Kimia</button>
+                        <div class="nested-dropdown-content">
+                            <a href="Kimia10_1.html">Hukum Dasar</a>
+                            <a href="Kimia10_2.html">Model Atom</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn">Rangkuman Materi Kelas 11 <i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-content">
+                    <div class="nested-dropdown">
+                        <button class="dropbtn">Matematika Wajib</button>
+                        <div class="nested-dropdown-content">
+                            <a href="Mat11_1.html">Translasi</a>
+                            <a href="Mat11_2.html">Refleksi</a>
+                        </div>
+                    </div>
+                    <div class="nested-dropdown">
+                        <button class="dropbtn">InSP</button>
+                        <div class="nested-dropdown-content">
+                            <a href="InSP11_1.html">Ideologi</a>
+                            <a href="InSP11_2.html">Perang Dunia II</a>
+                        </div>
+                    </div>
+                    <div class="nested-dropdown">
+                        <button class="dropbtn">Bahasa Indonesia</button>
+                        <div class="nested-dropdown-content">
+                            <a href="Bindo11_1.html">Karya Tulis Ilmiah</a>
+                            <a href="Bindo11_2.html">Teks Argumentasi</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="Kelas12.html">Rangkuman Materi Kelas 12</a>
+            <a href="Jadwal.html">Jadwal Zoom dan Contact Person</a>
+        </div>
+    </div>
+
+    <main> 
+    <h1 align="center"> Bahasa Indonesia Kelas 11 </h1>
+    <p style="text-align: center;">
+        <img src="c:\Users\divok\OneDrive\Documents\Gambar website\Kartul.jpg" width="50%">
+    </p>
+    <p> Selamat datang di pembelajaran Bahasa Indonesia. Disini, kami akan menuliskan rangkuman dari materi Karya Tulis
+        Ilmiah yang
+        sudah disampaikan di kelas. </p>
+
+    <h1 align="center"> Karya Tulis Ilmiah </h1>
+    <h2> Pengertian </h2>
+    <p> Karya tulis ilmiah adalah tulisan atau laporan tertulis yang memaparkan hasil penelitian atau kajian suatu
+        masalah oleh seseorang atau kelompok dengan memenuhi kaidah dan etika keilmuan.
+    <h2> Ciri-ciri </h2>
+    <ol>
+        <li> Sistematis: Susunan teks dalam karya tulis ilmiah dibuat teratur. </li>
+        <li> Logis: Isi dari karya tulis ilmiah dapat dipahami dan dibenarkan oleh akal sehat. </li>
+        <li> Objektif: Pernyataan yang ada dalam karya tulis ilmiah didasarkan pada pandangan umum, bukan pandangan
+            pribadi penulis. </li>
+        <li> Faktual: Kebenaran karya tulis ilmiah didasarkan pada kenyataan yang sesungguhnya, tidak imajinatif. </li>
+    </ol>
+    <h2> Struktur Karya Tulis Ilmiah </h2>
+    <ol>
+        <li> Judul. Judul karya ilmiah dibuat berdasarkan topik yang akan dibahas. Pembuatan judul ditulis
+            semenarik mungkin, namun tetap efektif dan menggunakan kata-kata sesuai KBBI dan PUEBI.</li>
+        <li> Abstrak. Abstrak adalah ringkasan dari keseluruhan isi yang dibahas dalam karya ilmiah. Abstrak umumnya
+            dibuat kurang lebih hanya 250 kata dan menggunakan bahasa yang efektif serta informatif.</li>
+        <li> Pendahuluan. Terbagi menjadi empat subbab yaitu latar belakang, rumusan masalah, tujuan penelitian, dan
+            manfaat penelitian.</li>
+        <li> Kerangka teori. Memuat landasan teori yang berisi konsep yang menjadi dasar penelitian dan hipotesis
+            penelitian atau kesimpulan sementara.</li>
+        <li> Metode penelitian. Metode penelitian sendiri adalah langkah-langkah yang digunakan oleh peneliti untuk
+            mendapatkan hasil yang valid. </li>
+        <li> Pembahasan. Proses penelitian yang dilakukan bisa dituliskan di bagian pembahasan. Pada bagian ini, kita
+            juga akan menjelaskan hasil didapatkan dari penelitian yang dilakukan.</li>
+        <li> Penutup. Pada bagian ini, peneliti memberikan kesimpulan tentang hasil penelitiannya dan saran dari
+            penelitian tersebut.</li>
+        <li> Daftar Pustaka. Daftar pustaka merupakan tempat untuk menaruh semua sumber referensi yang digunakan dalam
+            penelitian.</li>
+    </ol>
+    <h2> Kaidah Kebahasaan Karya Tulis Ilmiah </h2>
+    <ol>
+        <li> Menggunakan kata impersonal. Kata ganti yang dingunakan harus bersifat umum, seperti penulis atau peneliti.
+        </li>
+        <li> Menggunakan kata baku. Penulisan karya tulis ilmiah harus menggunakan kata baku, sesuai KBBI.</li>
+        <li> Menggunakan kalimat efektif. Dalam penulisan karya tulis ilmiah, hindari penggunaan kata atau frasa yang
+            berulang tanpa alasan yang jelas.</li>
+        <li> Menggunakan bahasa denotatif. Bahasa denotatif adalah bahasa yang memiliki arti dan makna sebenarnya. Jadi,
+            makna yang terkandung dalam kata harus diungkapkan secara eksplisit, untuk mencegah timbulnya
+            pemberian makna lain. </li>
+        <li> Hindari menggunakan opini pribadi. Karya tulis ilmiah sebaiknya tidak mencantumkan pendapat atau sentimen
+            pribadi dari penulis.</li>
+    </ol>
+    </p>
+    </main>
+    <footer>
+        'Pendidikan sebagai fondasi masa depan, janganlah menyerah untuk mengejar hal tersebut'
+        <h2 align="center"> AMDG </h2>
+    </footer>
+</body>
+
+</html>

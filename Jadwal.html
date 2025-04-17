@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Website Pembelajaran</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            flex: 1;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: mediumaquamarine;
+            padding: 0 16px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .navbar img {
+            height: 60px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-links a,
+        .dropbtn {
+            font-size: 16px;
+            color: white;
+            padding: 14px 16px;
+            text-decoration: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .nav-links a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: red;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 120%;
+            text-align: justify;
+            padding-left: 5px;
+            margin-right: 5px;
+            padding: 10px;
+        }
+
+        ol {
+            list-style-type: decimal;
+            margin-left: 20px;
+            font-size: 120%;
+        }
+
+        li {
+            padding: 5px;
+        }
+
+        footer {
+            background-color: #777;
+            padding: 20px;
+            color: white;
+            text-align: center;
+            font-size: larger;
+        }
+
+        td {
+            text-align: center;
+        }
+
+        @media (max-width: 480px) {
+            body {
+                font-size: 14px;
+            }
+
+            .navbar {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+        @media (min-width: 1025px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <img src="c:\Users\divok\OneDrive\Documents\Gambar website\images__2_-removebg-preview.png" alt="Logo" />
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn"> Rangkuman Materi Kelas 10 <i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-content">
+                    <a href="Mtk10.html">Matematika</a>
+                    <a href="BIo10.html">Biologi</a>
+                    <a href="Sosiologi10.html">Sosiologi</a>
+                    <a href="Kimia10.html">Kimia</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn"> Rangkuman Materi Kelas 11 <i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-content">
+                    <a href="Mtk11.html">Matematika</a>
+                    <a href="InSP11.html">InSP</a>
+                    <a href="Bindo11.html">Bahasa Indonesia</a>
+                </div>
+            </div>
+
+            <a href="Kelas12.html">Rangkuman Materi Kelas 12</a>
+            <a href="Jadwal.html">Jadwal Zoom dan Contact Person</a>
+        </div>
+    </div>
+
+    <main>
+        <h1 align="center"> Jadwal Tutor Sebaya lewat Zoom </h1>
+        <table border="1px solid black">
+
+            <tr>
+                <th style="width: 6%;"> No </th>
+                <th style="width: 15%"> Hari </th>
+                <th style="width: 35%;"> Pelajaran </th>
+                <th style="width: 20%;"> Jam </th>
+                <th style="width: 20%;"> Contact Person </th>
+            </tr>
+            <tr>
+                <td> 1 </td>
+                <td> Senin </td>
+                <td> Matematika Kelas 10 </td>
+                <td> 19.00 - 20.30 </td>
+                <td> Mark: 0812 4576 2341 </td>
+            </tr>
+            <tr>
+                <td> 2 </td>
+                <td> Selasa </td>
+                <td> Bahasa Indonesia Kelas 11 </td>
+                <td> 19.00 - 20.30 </td>
+                <td> Maria: 0856 9421 5943 </td>
+            </tr>
+            <tr>
+                <td> 3 </td>
+                <td> Rabu </td>
+                <td> Matematika Kelas 11 </td>
+                <td> 17.00 - 18.30 </td>
+                <td> Nathan: 0898 4512 7453 </td>
+            </tr>
+            <tr>
+                <td> 4 </td>
+                <td> Rabu </td>
+                <td> Biologi Kelas 10 </td>
+                <td> 19.00 - 20.30 </td>
+                <td> Sandra: 0865 4731 8932 </td>
+            </tr>
+            <tr>
+                <td> 5 </td>
+                <td> Kamis </td>
+                <td> Sosiologi Kelas 10 </td>
+                <td> 19.00 - 20.30 </td>
+                <td> Ali: 0862 3475 8943 </td>
+            </tr>
+            <tr>
+                <td> 6 </td>
+                <td> Jumat </td>
+                <td> Kimia Kelas 10 </td>
+                <td> 17.00 - 18.30 </td>
+                <td> Rose: 0568 7543 2365 </td>
+            </tr>
+            <tr>
+                <td> 7 </td>
+                <td> Jumat </td>
+                <td> InSP </td>
+                <td> 19.00 - 20.30 </td>
+                <td> Andrew: 0432 5687 3421 </td>
+            </tr>
+        </table>
+        <p> Link zoom: <a href="https://us04web.zoom.us/j/71762619638?pwd=f5k6H4YXlgaoQ1bb3qWPWH9EsWhRbM.1">
+                https://us04web.zoom.us/j/71762619638?pwd=f5k6H4YXlgaoQ1bb3qWPWH9EsWhRbM.1</a></p>
+    </main>
+    <footer>
+        'Pendidikan sebagai fondasi masa depan, janganlah menyerah untuk mengejar hal tersebut'
+        <h2 align="center"> AMDG </h2>
+    </footer>
+</body>
+
+</html>

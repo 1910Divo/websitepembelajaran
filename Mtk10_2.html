@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Website Pembelajaran</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            flex: 1;
+        }
+
+        .navbar {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            background-color: mediumaquamarine;
+            padding: 0 16px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .navbar img {
+            height: 60px;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-links a,
+        .dropbtn {
+            font-size: 16px;
+            color: white;
+            padding: 14px 16px;
+            text-decoration: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .nav-links a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: red;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .nested-dropdown {
+            position: relative;
+        }
+
+        .nested-dropdown-content {
+            display: none;
+            position: absolute;
+            left: 100%;
+            top: 0;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            z-index: 1;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .nested-dropdown:hover .nested-dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content button.dropbtn {
+            color: black;
+            padding: 12px 16px;
+            text-align: left;
+            width: 100%;
+        }
+
+        p {
+            font-size: larger;
+            text-align: justify;
+            padding: 5px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #777;
+            padding: 20px;
+            color: white;
+            text-align: center;
+            font-size: larger;
+        }
+
+        ol {
+            list-style-type: decimal;
+            margin-left: 20px;
+            font-size: 120%;
+        }
+
+        li {
+            padding: 10px;
+        }
+
+        @media (max-width: 480px) {
+            body {
+                font-size: 14px;
+            }
+
+            .navbar {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+        @media (min-width: 1025px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <img src="c:\Users\divok\OneDrive\Documents\Gambar website\images__2_-removebg-preview.png" alt="Logo" />
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+
+            <div class="dropdown">
+                <button class="dropbtn">Rangkuman Materi Kelas 10 <i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-content">
+                    <div class="nested-dropdown">
+                        <button class="dropbtn">Matematika</button>
+                        <div class="nested-dropdown-content">
+                            <a href="Mtk10_1.html">SPLDV</a>
+                            <a href="Mtk10_2.html">Eksponen</a>
+                        </div>
+                    </div>
+                    <div class="nested-dropdown">
+                        <button class="dropbtn">Biologi</button>
+                        <div class="nested-dropdown-content">
+                            <a href="Bio10_1.html">Virus</a>
+                            <a href="Bio10_2.html">Keanekaragaman Hayati</a>
+                        </div>
+                    </div>
+                    <div class="nested-dropdown">
+                        <button class="dropbtn">Sosiologi</button>
+                        <div class="nested-dropdown-content">
+                            <a href="Sosiologi10_1.html">Fungsionalisme Talcott Parsons</a>
+                            <a href="Sosiologi10_2.html">Teori Sosiologi Klasik</a>
+                        </div>
+                    </div>
+                    <div class="nested-dropdown">
+                        <button class="dropbtn">Kimia</button>
+                        <div class="nested-dropdown-content">
+                            <a href="Kimia10_1.html">Hukum Dasar</a>
+                            <a href="Kimia10_2.html">Model Atom</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn">Rangkuman Materi Kelas 11 <i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-content">
+                    <div class="nested-dropdown">
+                        <button class="dropbtn">Matematika Wajib</button>
+                        <div class="nested-dropdown-content">
+                            <a href="Mat11_1.html">Translasi</a>
+                            <a href="Mat11_2.html">Refleksi</a>
+                        </div>
+                    </div>
+                    <div class="nested-dropdown">
+                        <button class="dropbtn">InSP</button>
+                        <div class="nested-dropdown-content">
+                            <a href="InSP11_1.html">Ideologi</a>
+                            <a href="InSP11_2.html">Perang Dunia II</a>
+                        </div>
+                    </div>
+                    <div class="nested-dropdown">
+                        <button class="dropbtn">Bahasa Indonesia</button>
+                        <div class="nested-dropdown-content">
+                            <a href="Bindo11_1.html">Karya Tulis Ilmiah</a>
+                            <a href="Bindo11_2.html">Teks Argumentasi</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="Kelas12.html">Rangkuman Materi Kelas 12</a>
+            <a href="Jadwal.html">Jadwal Zoom dan Contact Person</a>
+        </div>
+    </div>
+
+    <main> 
+    <h1 align="center"> Matematika Kelas 10 </h1>
+    <p style="text-align: center;">
+        <img src="c:\Users\divok\OneDrive\Documents\Gambar website\eksponen.jpg" width="50%">
+    </p>
+    <p> Selamat datang di pembelajaran Matematika Kelas 10. Disini, kami akan menuliskan rangkuman dari
+        materi Eksponen yang diberikan di kelas. </p>
+
+    <h1 align="center"> Eksponen </h1>
+    <h2> Pengertian </h2>
+    <p> Eksponen adalah suatu bentuk perkalian dengan bilangan yang sama kemudian diulang. Eksponen bisa juga
+        kita kenal sebagai bilangan berpangkat.
+    </p>
+
+    <h2> Bentuk Umum </h2>
+    <p>
+        a<sup>n</sup> = a x a x a x ... x a (sebanyak n kali)
+    </p>
+
+    <h2> Sifat-sifat Eksponen </h2>
+    <ol>
+        <li> Pangkat Penjumlahan. Perkalian eksponen dengan basis yang sama, maka pangkatnya harus ditambah. Contoh: <p>
+            <p>
+                4<sup>2</sup> x 4<sup>3</sup> = 4<sup>2+3</sup> = 4<sup>5</sup>
+            </p>
+        </li>
+        <li> Pangkat Pengurangan. Pembagian eksponen dengan basis yang sama, maka pangkatnya harus dikurang. Contoh:
+            <p>
+                4<sup>3</sup> x 4<sup>2</sup> = 4<sup>3-2</sup> = 4<sup>1</sup>
+            </p>
+        </li>
+        <li> Perkalian Bilangan yang Dipangkatkan. Perkalian bilangan yang dipangkatkan, maka masing-masing bilangan
+            tersebut dipangkatkan juga. Contoh:
+            <p>
+                (3 x 5)<sup>2</sup> = 3<sup>2</sup> x 5<sup>2</sup>
+            </p>
+        </li>
+        <li> 
+            Perpangkatan pada Bilangan Pecahan. Untuk bilangan pecahan yang dipangkatkan, maka bilangan pembilang dan
+            penyebutnya harus dipangkatkan semua, dengan syarat nilai penyebut tidak boleh sama dengan 0.
+            <p style="text-align: center;">
+            <img src="c:\Users\divok\OneDrive\Documents\Gambar website\Screenshot 2025-04-16 203556.png" 
+            alt="Pangkat">
+            </p>
+        </li>
+    </ol>
+    </main>
+    <footer>
+        'Pendidikan sebagai fondasi masa depan, janganlah menyerah untuk mengejar hal tersebut'
+        <h2 align="center"> AMDG </h2>
+    </footer>
+</body>
+</html>

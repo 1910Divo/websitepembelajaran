@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Website Pembelajaran</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            flex: 1;
+        }
+
+        .navbar {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            background-color: mediumaquamarine;
+            padding: 0 16px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .navbar img {
+            height: 60px;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-links a,
+        .dropbtn {
+            font-size: 16px;
+            color: white;
+            padding: 14px 16px;
+            text-decoration: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .nav-links a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: red;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .nested-dropdown {
+            position: relative;
+        }
+
+        .nested-dropdown-content {
+            display: none;
+            position: absolute;
+            left: 100%;
+            top: 0;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            z-index: 1;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .nested-dropdown:hover .nested-dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content button.dropbtn {
+            color: black;
+            padding: 12px 16px;
+            text-align: left;
+            width: 100%;
+        }
+
+        p {
+            font-size: larger;
+            text-align: justify;
+            padding: 5px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #777;
+            padding: 20px;
+            color: white;
+            text-align: center;
+            font-size: larger;
+        }
+
+        ol {
+            list-style-type: decimal;
+            margin-left: 20px;
+            font-size: 120%;
+        }
+
+        ul {
+            list-style-type: symbols();
+        }
+
+        li {
+            padding: 10px;
+        }
+
+        @media (max-width: 480px) {
+            body {
+                font-size: 14px;
+            }
+
+            .navbar {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+        @media (min-width: 1025px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <img src="c:\Users\divok\OneDrive\Documents\Gambar website\images__2_-removebg-preview.png" alt="Logo" />
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+
+            <div class="dropdown">
+                <button class="dropbtn">Rangkuman Materi Kelas 10 <i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-content">
+                    <div class="nested-dropdown">
+                        <button class="dropbtn">Matematika</button>
+                        <div class="nested-dropdown-content">
+                            <a href="Mtk10_1.html">SPLDV</a>
+                            <a href="Mtk10_2.html">Eksponen</a>
+                        </div>
+                    </div>
+                    <div class="nested-dropdown">
+                        <button class="dropbtn">Biologi</button>
+                        <div class="nested-dropdown-content">
+                            <a href="Bio10_1.html">Virus</a>
+                            <a href="Bio10_2.html">Keanekaragaman Hayati</a>
+                        </div>
+                    </div>
+                    <div class="nested-dropdown">
+                        <button class="dropbtn">Sosiologi</button>
+                        <div class="nested-dropdown-content">
+                            <a href="Sosiologi10_1.html">Fungsionalisme Talcott Parsons</a>
+                            <a href="Sosiologi10_2.html">Teori Sosiologi Klasik</a>
+                        </div>
+                    </div>
+                    <div class="nested-dropdown">
+                        <button class="dropbtn">Kimia</button>
+                        <div class="nested-dropdown-content">
+                            <a href="Kimia10_1.html">Hukum Dasar</a>
+                            <a href="Kimia10_2.html">Model Atom</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn">Rangkuman Materi Kelas 11 <i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-content">
+                    <div class="nested-dropdown">
+                        <button class="dropbtn">Matematika Wajib</button>
+                        <div class="nested-dropdown-content">
+                            <a href="Mat11_1.html">Translasi</a>
+                            <a href="Mat11_2.html">Refleksi</a>
+                        </div>
+                    </div>
+                    <div class="nested-dropdown">
+                        <button class="dropbtn">InSP</button>
+                        <div class="nested-dropdown-content">
+                            <a href="InSP11_1.html">Ideologi</a>
+                            <a href="InSP11_2.html">Perang Dunia II</a>
+                        </div>
+                    </div>
+                    <div class="nested-dropdown">
+                        <button class="dropbtn">Bahasa Indonesia</button>
+                        <div class="nested-dropdown-content">
+                            <a href="Bindo11_1.html">Karya Tulis Ilmiah</a>
+                            <a href="Bindo11_2.html">Teks Argumentasi</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="Kelas12.html">Rangkuman Materi Kelas 12</a>
+            <a href="Jadwal.html">Jadwal Zoom dan Contact Person</a>
+        </div>
+    </div>
+
+    <main> 
+    <h1 align="center"> InSP Kelas 11 </h1>
+    <p style="text-align: center;">
+        <img src="c:\Users\divok\OneDrive\Documents\Gambar website\Ideologi.jpg" width="40%">
+      </p>
+    <p> Selamat datang di pembelajaran Integrasi Sejarah dan PKN (InSP). Disini, kami akan menuliskan rangkuman dari
+        materi Ideologi yang dijelaskan di kelas. </p>
+
+    <h1 align="center"> Ideologi </h1>
+    <h2> Pengertian </h2>
+    <p> Ideologi adalah seperangkat keyakinan atau filosofi yang dikaitkan dengan seseorang atau sekelompok orang.
+        Istilah ideologi berasal dari bahasa Prancis idéologie, yang berasal dari gabungan bahasa Yunani: idéā yang
+        berarti "gagasan, pola" dan -logíā yang berarti "studi tentang, ilmu yang mempelajari". </p>
+
+    <h2> Fungsi </h2>
+    <ol>
+        <li> Peran Ideologi Umum. Di zaman sekarang ini, ideologi liberalisme dan komunisme telah menjadi dua ideologi
+            umum utama yang memainkan peran penting dalam mempengaruhi perilaku negara dalam hubungan internasional.
+            Ideologi-ideologi umum banyak digunakan untuk menutup-nutupi tujuan-tujuan kekuasaan suatu bangsa. </li>
+
+        <li> Peran Ideologi Tertentu. Zaman kontemporer jelas mencerminkan peran yang dimainkan oleh beberapa ideologi
+            tertentu dalam politik internasional seperti Ideologi Status Quo, Ideologi Imperialisme, dan Ideologi
+            Ambigu. Ideologi Status Quo sendiri dapat digambarkan sebagai sesuatu yang bertahan adalah cenderung
+            menentang setiap perubahan.
+        </li>
+
+    </ol>
+    <h2> Jenis-Jenis Ideologi </h2>
+    <p>
+    <ol>
+        <img src="c:\Users\divok\OneDrive\Documents\Gambar website\Kapitalisme.png" alt="Kapitalisme"
+    style="float:left;width:400px;height: 470px;">
+        <li> Kapitalisme. sistem ekonomi yang didasarkan pada kepemilikan pribadi atas alat-alat produksi dan operasinya
+            untuk keuntungan. Ciri-ciri utama kapitalisme meliputi akumulasi modal, pasar kompetitif, sistem harga,
+            kepemilikan pribadi dan pengakuan hak milik, pertukaran sukarela dan kerja upahan.</li>
+
+        <li> Liberalisme. Liberalisme adalah filosofi politik dan moral yang didasarkan pada kebebasan, persetujuan dari
+            yang diperintah dan persamaan di depan hukum. Liberalisme umumnya mendukung hak-hak individu termasuk
+            hak-hak sipil dan hak asasi manusia, demokrasi, sekularisme, kebebasan berbicara, kebebasan pers, kebebasan
+            beragama dan ekonomi pasar.</li>
+
+        <li> Sosialisme. Sosialisme adalah sistem ekonomi dan politik kerakyatan yang didasarkan pada kepemilikan
+            publik. Sosialisme juga dikenal sebagai kepemilikan kolektif atau bersama atas alat-alat produksi. Dalam
+            sistem sosialis murni, semua keputusan produksi dan distribusi yang sah dibuat oleh pemerintah, dan individu
+            bergantung pada negara untuk segala hal mulai dari makanan hingga perawatan kesehatan. </li>
+
+        <li> Feminisme. Feminisme adalah sebuah ideologi tentang mengubah cara orang melihat hak laki-laki dan perempuan
+            (terutama perempuan), dan mengkampanyekan kesetaraan gender. Feminisme dimulai dengan gagasan bahwa hak
+            asasi manusia harus diberikan kepada perempuan. Ide ini dikemukakan oleh beberapa filosof pada abad ke-18
+            dan 19 seperti Mary Wollstonecraft dan John Stuart Mill.</li>
+    </ol>
+    </p>
+    </main>
+    <footer>
+        'Pendidikan sebagai fondasi masa depan, janganlah menyerah untuk mengejar hal tersebut'
+        <h2 align="center"> AMDG </h2>
+   </footer>
+</body>
+
+</html>
