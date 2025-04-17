@@ -27,6 +27,7 @@
 
         .navbar {
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
             justify-content: space-between;
             background-color: mediumaquamarine;
@@ -40,6 +41,7 @@
 
         .nav-links {
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
             gap: 10px;
         }
@@ -90,32 +92,42 @@
             background-color: #ddd;
         }
 
+        .nested-dropdown {
+            position: relative;
+        }
+
+        .nested-dropdown-content {
+            display: none;
+            position: absolute;
+            left: 100%;
+            top: 0;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            z-index: 1;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .nested-dropdown:hover .nested-dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content button.dropbtn {
+            color: black;
+            padding: 12px 16px;
+            text-align: left;
+            width: 100%;
+        }
+
         main {
             flex: 1;
             padding: 20px;
         }
 
-        h1 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
         p {
-            font-size: 120%;
+            font-size: larger;
             text-align: justify;
-            padding-left: 5px;
-            margin-right: 5px;
-            padding: 10px;
-        }
-
-        ol {
-            list-style-type: decimal;
-            margin-left: 20px;
-            font-size: 120%;
-        }
-
-        li {
             padding: 5px;
+            font-family: 'Times New Roman', Times, serif;
         }
 
         footer {
@@ -126,8 +138,14 @@
             font-size: larger;
         }
 
-        td {
-            text-align: center;
+        ol {
+            list-style-type: decimal;
+            margin-left: 20px;
+            font-size: 120%;
+        }
+
+        li {
+            padding: 10px;
         }
 
         @media (max-width: 480px) {
@@ -154,28 +172,71 @@
         }
     </style>
 </head>
-
 <body>
 
     <div class="navbar">
         <img src="images__2_-removebg-preview.png" alt="Logo" />
         <div class="nav-links">
             <a href="index.html">Home</a>
+
             <div class="dropdown">
-                <button class="dropbtn"> Rangkuman Materi Kelas 10 <i class="fa fa-caret-down"></i></button>
+                <button class="dropbtn">Rangkuman Materi Kelas 10 <i class="fa fa-caret-down"></i></button>
                 <div class="dropdown-content">
-                    <a href="Mtk10.html">Matematika</a>
-                    <a href="BIo10.html">Biologi</a>
-                    <a href="Sosiologi10.html">Sosiologi</a>
-                    <a href="Kimia10.html">Kimia</a>
+                    <div class="nested-dropdown">
+                        <button class="dropbtn">Matematika</button>
+                        <div class="nested-dropdown-content">
+                            <a href="Mtk10_1.html">SPLDV</a>
+                            <a href="Mtk10_2.html">Eksponen</a>
+                        </div>
+                    </div>
+                    <div class="nested-dropdown">
+                        <button class="dropbtn">Biologi</button>
+                        <div class="nested-dropdown-content">
+                            <a href="Bio10_1.html">Virus</a>
+                            <a href="Bio10_2.html">Keanekaragaman Hayati</a>
+                        </div>
+                    </div>
+                    <div class="nested-dropdown">
+                        <button class="dropbtn">Sosiologi</button>
+                        <div class="nested-dropdown-content">
+                            <a href="Sosiologi10_1.html">Fungsionalisme Talcott Parsons</a>
+                            <a href="Sosiologi10_2.html">Teori Sosiologi Klasik</a>
+                        </div>
+                    </div>
+                    <div class="nested-dropdown">
+                        <button class="dropbtn">Kimia</button>
+                        <div class="nested-dropdown-content">
+                            <a href="Kimia10_1.html">Hukum Dasar</a>
+                            <a href="Kimia10_2.html">Model Atom</a>
+                        </div>
+                    </div>
                 </div>
             </div>
+
             <div class="dropdown">
-                <button class="dropbtn"> Rangkuman Materi Kelas 11 <i class="fa fa-caret-down"></i></button>
+                <button class="dropbtn">Rangkuman Materi Kelas 11 <i class="fa fa-caret-down"></i></button>
                 <div class="dropdown-content">
-                    <a href="Mtk11.html">Matematika</a>
-                    <a href="InSP11.html">InSP</a>
-                    <a href="Bindo11.html">Bahasa Indonesia</a>
+                    <div class="nested-dropdown">
+                        <button class="dropbtn">Matematika Wajib</button>
+                        <div class="nested-dropdown-content">
+                            <a href="Mat11_1.html">Translasi</a>
+                            <a href="Mat11_2.html">Refleksi</a>
+                        </div>
+                    </div>
+                    <div class="nested-dropdown">
+                        <button class="dropbtn">InSP</button>
+                        <div class="nested-dropdown-content">
+                            <a href="InSP11_1.html">Ideologi</a>
+                            <a href="InSP11_2.html">Perang Dunia II</a>
+                        </div>
+                    </div>
+                    <div class="nested-dropdown">
+                        <button class="dropbtn">Bahasa Indonesia</button>
+                        <div class="nested-dropdown-content">
+                            <a href="Bindo11_1.html">Karya Tulis Ilmiah</a>
+                            <a href="Bindo11_2.html">Teks Argumentasi</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -183,7 +244,6 @@
             <a href="Jadwal.html">Jadwal Zoom dan Contact Person</a>
         </div>
     </div>
-
     <main>
         <h1 align="center"> Jadwal Tutor Sebaya lewat Zoom </h1>
         <table border="1px solid black">
